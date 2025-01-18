@@ -9,6 +9,7 @@ Este proyecto implementa un sistema de login y registro utilizando Laravel 11, V
 - [Requisitos](#requisitos)
 - [Instalación](#instalación)
 - [Uso](#uso)
+- [Saludos](#saludos)
 
 ## Descripción
 
@@ -61,7 +62,7 @@ Copia el archivo .env.example y renómbralo a .env:
 cp .env.example .env
 ```
 
-Abre el archivo .env y configura la conexión a la base de datos SQLite:
+Abre el archivo .env y verifica que contenga la siguiente configuración:
 
 ```bash
 DB_CONNECTION=sqlite
@@ -79,6 +80,8 @@ Ejecuta las migraciones para crear las tablas en la base de datos:
 ```bash
 php artisan migrate
 ```
+
+Si te aparece un mensaje como este:  Would you like to create it? dale que yes.
 
 ### 5. Instalar las dependencias de frontend
 
@@ -106,5 +109,19 @@ php artisan serve
 
 ## Uso
 
-dirigete a http://localhost:8000 para acceder al sitio web. Ahi se mostrara la pagina con dos botones para iniciar sesión y registrarse.
+- Dirigete a http://localhost:8000 para acceder al sitio web. Ahi se mostrara la pagina con dos botones para iniciar sesión y registrarse.
+- Si se muestra un error en el buscador como este: No application encryption key has been specified. Ejecuta el siguiente comando en la terminal para generar una clave de cifrado única para tu aplicación:
 
+```bash
+php artisan key:generate
+```
+
+Reiniciar el servidor (si es necesario) con el siguiente comando:
+
+```bash
+php artisan serve
+```
+
+## Saludos
+
+Hola, soy Nicolas Sanhueza saludos y espero que este todo bien.
